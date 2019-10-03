@@ -1,0 +1,15 @@
+psql (9.3.1)
+Type "help" for help.
+
+$ docker=# CREATE TABLE cities (
+docker(#     name            varchar(80),
+docker(#     location        point
+docker(# );
+CREATE TABLE
+$ docker=# INSERT INTO cities VALUES ('San Francisco', '(-194.0, 53.0)');
+INSERT 0 1
+$ docker=# select * from cities;
+     name      | location
+---------------+-----------
+ San Francisco | (-194,53)
+(1 row)
